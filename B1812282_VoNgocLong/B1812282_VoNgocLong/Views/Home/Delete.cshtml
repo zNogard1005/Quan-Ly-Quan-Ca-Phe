@@ -1,0 +1,78 @@
+﻿@model B1812282_VoNgocLong.Models.BENHNHAN
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BENHNHAN</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <!-- Add thefollowing 2 row-s -->
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MABN)
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TENBN)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TENBN)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NGAYSINH)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NGAYSINH)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GIOITINH)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GIOITINH)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DOITUONG)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DOITUONG)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DIENTHOAI)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DIENTHOAI)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DIACHI)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DIACHI)
+            </dd>
+
+        </dl>
+
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+     }
+</div>

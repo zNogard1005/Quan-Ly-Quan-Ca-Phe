@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="B1812282_VoNgocLongModelStoreContainer" CdmEntityContainer="B1812282_VoNgocLongEntities">
+    <EntitySetMapping Name="BENHNHANs">
+      <EntityTypeMapping TypeName="B1812282_VoNgocLongModel.BENHNHAN">
+        <MappingFragment StoreEntitySet="BENHNHAN">
+          <ScalarProperty Name="MABN" ColumnName="MABN" />
+          <ScalarProperty Name="TENBN" ColumnName="TENBN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="DOITUONG" ColumnName="DOITUONG" />
+          <ScalarProperty Name="DIENTHOAI" ColumnName="DIENTHOAI" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

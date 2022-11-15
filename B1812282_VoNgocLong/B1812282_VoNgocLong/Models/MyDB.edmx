@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="B1812282_VoNgocLongModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BENHNHAN">
+          <Key>
+            <PropertyRef Name="MABN" />
+          </Key>
+          <Property Name="MABN" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TENBN" Type="nvarchar" MaxLength="255" />
+          <Property Name="NGAYSINH" Type="date" />
+          <Property Name="GIOITINH" Type="bit" />
+          <Property Name="DOITUONG" Type="nvarchar" MaxLength="255" />
+          <Property Name="DIENTHOAI" Type="varchar" MaxLength="10" />
+          <Property Name="DIACHI" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="B1812282_VoNgocLongModelStoreContainer">
+          <EntitySet Name="BENHNHAN" EntityType="Self.BENHNHAN" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="B1812282_VoNgocLongModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BENHNHAN">
+          <Key>
+            <PropertyRef Name="MABN" />
+          </Key>
+          <Property Name="MABN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TENBN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+          <Property Name="GIOITINH" Type="Boolean" />
+          <Property Name="DOITUONG" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DIENTHOAI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DIACHI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="B1812282_VoNgocLongEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BENHNHANs" EntityType="Self.BENHNHAN" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="B1812282_VoNgocLongModelStoreContainer" CdmEntityContainer="B1812282_VoNgocLongEntities">
+          <EntitySetMapping Name="BENHNHANs">
+            <EntityTypeMapping TypeName="B1812282_VoNgocLongModel.BENHNHAN">
+              <MappingFragment StoreEntitySet="BENHNHAN">
+                <ScalarProperty Name="MABN" ColumnName="MABN" />
+                <ScalarProperty Name="TENBN" ColumnName="TENBN" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="DOITUONG" ColumnName="DOITUONG" />
+                <ScalarProperty Name="DIENTHOAI" ColumnName="DIENTHOAI" />
+                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
